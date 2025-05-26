@@ -6,11 +6,11 @@ import pickle
 import numpy as np
 
 # Load trained model
-with open('../models/best_cv_result.pkl', 'rb') as f:
+with open('models/best_cv_result.pkl', 'rb') as f:
 	model = pickle.load(f)
 
 # Load feature template
-feature_template = pd.read_csv('../ML_feature_set.csv')
+feature_template = pd.read_csv('dataset/ML_feature_set.csv')
 feature_columns = feature_template.drop(columns='churned').columns.tolist()
 
 st.set_page_config(page_title="Seller Churn Predictor", layout="wide")
